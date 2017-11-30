@@ -38,12 +38,18 @@ $brand-color: #930025;
 //=====================================================================//
 html 
 { 
-  
+    font-size: 16px;
+
+    @include breakpoint(xl) {
+    }
 }
 
 body 
 {
-
+  background:rgb(231, 231, 231);
+  position: relative;
+  height: 100vh;
+  line-height: 0;
 }
 
 img 

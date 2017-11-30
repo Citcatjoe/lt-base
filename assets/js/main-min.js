@@ -1,1 +1,1 @@
-jQuery(document).ready(function($){});
+jQuery(document).ready(function($){function n(){return new TimelineMax}function e(){i.add(n())}var i=new TimelineMax,u=$("#scene svg");e()});
