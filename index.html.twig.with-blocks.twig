@@ -1,9 +1,11 @@
+{% use '_blocks.html.twig' %}
+
 <!DOCTYPE HTML>
 
 <html> 
 
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{{ block('head_brand') }}
 		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -18,6 +20,7 @@
 	</head>  
  
 	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }} 
 		
 		<!-- <div class="overlay">
 			<img class="logo-brand" src="img/logo-lt-blanc.svg" alt="">
@@ -706,6 +709,7 @@
 			</div> 
 
 		</div>
+		{{ block('footer_brand') }}
 	</body>
 	
 </html>

@@ -36,6 +36,14 @@ $brand-color: #930025;
 //=====================================================================//
 // SOME BASE STYLES
 //=====================================================================//
+html, body
+{
+  // en perspective d'embed sur lt.ch
+  // - dans mdb, mettre un media-slot - iframe
+  // - juste mettre cette propriété ci-dessous et normalament pas besoin de "scrolling='no'" comme atribut iframe
+  // - si je veux la scrollbar en dehors du rapport 16/9, il faut commencer à guezner avec pym
+  overflow: hidden;
+}
 html 
 { 
     font-size: 16px;

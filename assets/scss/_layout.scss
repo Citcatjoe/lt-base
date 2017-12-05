@@ -1,17 +1,89 @@
 #scene 
 {
     width: 100%;
-    max-width: 760px;
-    // height: 430px;
+    // Désactivé pour pouvoir être embeddé
+    // max-width: 760px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    position: relative;  
     background:white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
+    .scene-text
+    {
+        top: 10px;
+        position: absolute;
+        
+        p
+        {
+            font-family: 'Rooney';
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, .7);
+            // text-align: justify;
+            // hyphens: auto;
+            font-size: 1em; //16px
+            line-height: 1.333em;
+            width: 196px;
+
+            @media screen and (max-width: 560px) {
+                width: 180px;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 0.8em;
+                width: 150px;
+            }
+
+            @media screen and (max-width: 450px) {
+                font-size: 0.65em; 
+                width: 95px;
+            }
+        }
+    }
+
+    .scene-controls
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        background: rgba(247, 247, 247, .5);
+        //Dans le cas d'un overlay avec bouton play
+        visibility: hidden;
+        opacity: 0;
+
+
+         #mainTlSlider 
+        {
+            // position: absolute;
+            // bottom: 10px;
+            width: calc(100% - 38px);
+            // max-width: 420px;
+            height: 100%;
+            //background: red;
+            background: transparent;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 0;
+            border-radius: 0; 
+
+            .ui-slider-handle
+            {
+                height: 100%;
+                top: 0;
+                border-radius: 0;
+                border: 1px solid rgb(212, 212, 212);
+                transform: translateY(-5px);
+            }
+        }
+    }
 }
 
 svg
-{;
+{
+   cursor: pointer;
 }
+
+
